@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Intagram</title>
+ 
+</head>
+<body>
+    <h2>This page belong to @<%= data.name %></h2>
+    <button>Follow</button>
+    <button>Message</button>
+
+    <p><b>Followers:</b><%= data.followers %></p> 
+    <p><b>Following:</b><%= data.following %></p>
+
+    <hr>
+    <% for(post of data.posts){%>
+        <img src="<%=post.image%>" alt="some img">
+        <p><b>Likes:</b><%= post.likes %></p> 
+        <p><b>Comments:</b><%= post.comments %></p>
+        <% } %>
+
+</body>
+</html>
+
+
